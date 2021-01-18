@@ -15,6 +15,9 @@ form.settings
 				input(type="radio" name="siteSettings" value="password" id="password").visually-hidden.settings__input
 				label(for="password").settings__label Сайт защищен паролем
 				p.settings__explanation Сайт увидит только тот, у кого есть пароль
+				.settings__extraField
+					label(for="password").settings__extraLabel Введите пароль
+					input(type="password" name="password" id="password").settings__extraInput
 
 			li.settings__item
 				input(type="radio" name="siteSettings" value="private" id="private").visually-hidden.settings__input

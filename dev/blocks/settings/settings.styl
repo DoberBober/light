@@ -100,6 +100,26 @@
 	color #fff
 	border-color var(--purple)
 
+.settings__extraField
+	display none
+	margin-top 20px
+	margin-bottom 40px
+
+.settings__input:checked ~ .settings__extraField
+	display block
+
+.settings__extraLabel
+	display block
+	margin-bottom 8px
+	font-size 13px
+
+.settings__extraInput
+	width 100%
+	padding 8px 0
+	border none
+	background none
+	border-bottom 1px solid #C7C7C7
+
 @media (min-width: 720px)
 	.settings__block
 		display flex
