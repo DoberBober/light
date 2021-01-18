@@ -1,1 +1,20 @@
-.menu
+nav.menu
+	button(type="button" aria-label="Открыть меню").menu__btn
+		+svgElement('menu', 16, 16, 'menu__svg menu__svg--open')
+		+svgElement('close', 16, 16, 'menu__svg menu__svg--close')
+	.menu__wrapper
+		ul.menu__list
+			li.menu__item
+				a(href="#").menu__link CRM
+			li.menu__item
+				a(href="#").menu__link Мои сайты
+			li.menu__item
+				a(href="#").menu__link Каталог
+			li.menu__item
+				a(href="#").menu__link Тарифы
+			li.menu__item
+				a(href="#").menu__link Блог
+			li.menu__item.menu__item--separate
+				a(href="#").menu__link Помощь
+
+		include ../account/account.pug

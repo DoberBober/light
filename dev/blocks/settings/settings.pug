@@ -1,1 +1,26 @@
-.settings
+form.settings
+	h2.settings__heading Настройки доступа к сайту
+	p.settings__description Контролируйте, кому доступен ваш сайт
+
+	.settings__block
+		.settings__subHeading Интернет сайт
+
+		ul.settings__list
+			li.settings__item
+				input(type="radio" name="siteSettings" value="public" id="public" checked).visually-hidden.settings__input
+				label(for="public").settings__label Опубликовать сайт
+				p.settings__explanation Доступно при оплаченном тарифном плане и купленном домене
+
+			li.settings__item
+				input(type="radio" name="siteSettings" value="password" id="password").visually-hidden.settings__input
+				label(for="password").settings__label Сайт защищен паролем
+				p.settings__explanation Сайт увидит только тот, у кого есть пароль
+
+			li.settings__item
+				input(type="radio" name="siteSettings" value="private" id="private").visually-hidden.settings__input
+				label(for="private").settings__label Приватный сайт
+				p.settings__explanation Только авторы и владелец сайта смогут увидеть сайт
+
+	.settings__btns
+		button(type="reset").settings__btn Отменить
+		button(type="submit").settings__btn.settings__btn--fill Сохранить

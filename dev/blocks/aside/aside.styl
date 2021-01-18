@@ -1,2 +1,52 @@
 .aside
-    display block
+	display none
+
+@media (min-width: 1024px)
+	.aside
+		display block
+		flex-shrink 0
+		margin-right 50px
+		width 300px
+
+	.aside__list
+		margin 0 0 50px
+		padding 20px
+		list-style none
+		background #fff
+		border 1px solid #C7C7C7
+		border-radius 20px
+
+	.aside__item
+		& + .aside__item
+			margin-top 24px
+
+	.aside__link
+		color var(--dark)
+		text-decoration none
+		font-weight 700
+		font-size 15px
+		text-decoration none
+		transition 0.25s
+		position relative
+
+		&::before
+			transition 0.25s linear
+			content ''
+			position absolute
+			left -20px
+			top 0
+			width 2px
+			height 0
+			background var(--purple)
+
+		&:hover, &:focus
+			color var(--purple)
+
+			&::before
+				height 100%
+
+	.aside__link--active
+		color var(--purple)
+
+		&::before
+			height 100%

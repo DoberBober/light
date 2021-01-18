@@ -1,2 +1,89 @@
-.menu
-    display block
+.menu__btn
+	background none
+	border none
+	padding 0
+
+	svg
+		transition 0.25s
+
+	&:hover, &:focus
+		svg
+			fill var(--purple)
+
+.menu__link
+	text-decoration none
+	color var(--dark)
+	font-weight 700
+	font-size 20px
+
+	&:hover, &:focus
+		text-decoration underline
+
+.menu__list
+	margin 0
+	padding 0
+	list-style none
+
+@media (max-width: 719px)
+	.menu__svg--close
+		display none
+
+	.menu__wrapper
+		position absolute
+		left 0
+		top 100%
+		z-index 1
+		background #fff
+		width 100%
+		height calc(100vh - 60px)
+		margin-top 1px
+		padding 14px 16px 32px
+		flex-direction column
+		overflow-y auto
+		display flex
+		visibility hidden
+		opacity 0
+		transition 0.25s
+		transform translateX(-100%)
+
+	.menu__wrapper--active
+		visibility visible
+		opacity 1
+		transform translateX(0%)
+
+	.menu__btn--active
+		.menu__svg--close
+			display block
+
+		.menu__svg--open
+			display none
+
+	.menu__list
+		margin-bottom 40px
+
+	.menu__item
+		margin-top 24px
+
+	.menu__link
+		font-size 24px
+
+@media (min-width: 720px)
+	.menu__btn
+		display none
+
+	.menu__wrapper
+		display flex
+		align-items center
+
+	.menu__list
+		display flex
+
+	.menu__item
+		& + .menu__item:not(.menu__item--separate)
+			margin-left 24px
+
+	.menu__item--separate
+		margin-left 60px
+
+	.menu__link
+		font-size 15px

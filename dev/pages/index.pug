@@ -3,14 +3,25 @@ html(lang="ru")
 	include ../blocks/_head/_head.pug
 	+head('Главная')
 
-	body.frontpage
+	body
 		.sprite
-			//- include ../../public/images/sprite.svg
+			include ../../public/images/sprite.svg
 
 		include ../blocks/_mixins/_svgElement.pug
 
 
 		include ../blocks/header/header.pug
+
+		.content
+			.container
+				include ../blocks/top/top.pug
+
+			.container.content__container
+				include ../blocks/aside/aside.pug
+				main.content__main
+					include ../blocks/settings/settings.pug
+
+		include ../blocks/notification/notification.pug
 
 
 		include ../blocks/_mixins/_scripts.pug

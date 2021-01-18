@@ -1,1 +1,10 @@
-.aside
+- var n = 0;
+aside.aside
+	ul.aside__list
+		while n < 12
+			- n++
+			li.aside__item
+				if n==4
+					a(href="#").aside__link.aside__link--active Доступ к сайту
+				else
+					a(href="#").aside__link Доступ к сайту

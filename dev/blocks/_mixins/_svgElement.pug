@@ -1,7 +1,7 @@
-mixin svgElement(name, width, height)
+mixin svgElement(name, width, height, extraClass='')
 	if(width || height)
-		svg(width=width height=height aria-hidden="true")
+		svg(width=width height=height aria-hidden="true" class=extraClass)
 			use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#"+name)
 	else
-		svg(aria-hidden="true")
+		svg(aria-hidden="true" class=extraClass)
 			use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#"+name)

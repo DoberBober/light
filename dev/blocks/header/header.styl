@@ -1,2 +1,33 @@
+.logo
+	font-weight 700
+	font-size 15px
+	color: var(--dark)
+	text-decoration none
+	transition 0.25s
+
+	&:hover, &:focus
+		opacity 0.75
+
 .header
-    display block
+	position relative
+	margin-bottom 24px
+	border 1px solid #C7C7C7
+	padding 19px 0
+	background #fff
+
+.header__container
+	padding 0 16px
+	display flex
+	align-items center
+	justify-content space-between
+
+@media (min-width: 720px)
+	.logo
+		font-size 20px
+
+	.header
+		margin-bottom 35px
+
+@media (min-width: 1024px)
+	.header__container
+		padding 0 40px

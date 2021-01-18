@@ -1,2 +1,42 @@
 .notification
-    display block
+	background var(--dark)
+	border-radius 50px
+	color #fff
+	font-weight 700
+	font-size 13px
+	width 100%
+	max-width calc(100vw - 32px)
+	margin 0 auto
+	padding 10px 18px
+	position fixed
+	left 50%
+	bottom 16px
+	transform translateX(-50%)
+	display flex
+	align-items center
+	transition 0.25s
+
+.notification--remove
+	transform translate(-50%, 100%)
+	opacity 0
+
+.notification__close
+	border none
+	background none
+	margin-left auto
+	padding 0
+	transition 0.25s
+
+	svg
+		display block
+		fill #fff
+
+	&:hover, &:focus
+		transform rotate(90deg)
+
+.notification__text
+	padding-right 20px
+
+@media (min-width: 720px)
+	.notification
+		max-width 600px

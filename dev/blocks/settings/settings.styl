@@ -1,2 +1,112 @@
 .settings
-    display block
+	margin 0 -8px 40px
+	border 1px solid #C7C7C7
+	padding 16px
+	box-sizing border-box
+	border-radius 20px
+	background #fff
+
+.settings__heading
+	margin 0 0 12px
+	color var(--dark)
+	font-weight 700
+	font-size 20px
+
+.settings__description
+	margin 0 0 40px
+	color var(--grey)
+	font-weight 500
+	font-size 15px
+
+.settings__subHeading
+	margin 40px 0 17px
+	color var(--grey)
+	font-size 11px
+	text-transform uppercase
+
+.settings__list
+	margin 0
+	padding 0
+	list-style none
+
+.settings__item
+	position relative
+	padding-left 24px
+	font-size 15px
+
+	& + .settings__item
+		margin-top 24px
+
+.settings__label
+	color var(--dark)
+	font-weight 700
+
+	&::before, &::after
+		content ''
+		position absolute
+		border-radius 100%
+
+	&::before
+		left 0
+		top 0
+		width 16px
+		height 16px
+		border 2px solid #C7C7C7
+
+	&::after
+		width 8px
+		height 8px
+		left 4px
+		top 4px
+		background var(--purple)
+		transform scale(0)
+		transition 0.25s
+
+.settings__explanation
+	margin 4px 0 0
+	color var(--grey)
+	font-weight 500
+
+.settings__input:focus + .settings__label
+	outline 1px solid var(--purple)
+
+.settings__input:checked + .settings__label
+	&::after
+		transform scale(1)
+
+.settings__btns
+	margin-top 32px
+	display flex
+	justify-content flex-end
+
+.settings__btn
+	color var(--grey)
+	font-weight 700
+	font-size 15px
+	border 1px solid #C7C7C7
+	border-radius 20px
+	background transparent
+	transition 0.25s
+	padding 10px 15px
+
+	& + .settings__btn
+		margin-left 12px
+
+	&:hover, &:focus
+		box-shadow 0 0 10px 0 var(--purple)
+
+.settings__btn--fill
+	background var(--purple)
+	color #fff
+	border-color var(--purple)
+
+@media (min-width: 720px)
+	.settings__block
+		display flex
+
+	.settings__subHeading
+		margin 0 40px 0 0
+		flex-grow 1
+
+	.settings__list
+		padding-right 40px

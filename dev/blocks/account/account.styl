@@ -1,0 +1,36 @@
+@media (max-width: 719px)
+	.account
+		margin-top auto
+		display flex
+		align-items center
+
+	.account__name
+		font-weight 700
+		font-size 15px
+		color var(--dark)
+
+	.account__img
+		display block
+		margin-right 16px
+
+	.account__logout
+		display inline-block
+		margin-top 8px
+		font-weight 700
+		font-size 15px
+		color var(--purple)
+		text-decoration none
+
+		&:hover, &:focus
+			text-decoration underline
+
+@media (min-width: 720px)
+	.account
+		margin-left 24px
+
+	.account__wrap
+		display none
+
+	.account__img
+		width 40px
+		height 40px
